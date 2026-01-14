@@ -12,6 +12,11 @@ Sistema profissional de investimento automatizado em criptomoedas com interface 
 - **Backup e Recuperação**: Transações de banco com rollback automático
 - **Monitoramento**: Verificação de status das ordens pendentes
 
+## SCREESHOTS
+
+<img width="1324" height="761" alt="image" src="https://github.com/user-attachments/assets/357e381b-46fe-4c0a-9d3c-6e677ed18470" />
+
+
 ## 🔒 Melhorias de Segurança Implementadas
 
 - ✅ **Prepared Statements**: Proteção contra SQL Injection
