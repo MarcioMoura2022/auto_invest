@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Invest - Visualização das Telas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .screen-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            padding: 30px;
+            page-break-inside: avoid;
+        }
+        .screen-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .screen-description {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .mockup-browser {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .browser-bar {
+            background: #f0f0f0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .browser-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .browser-dot.red { background: #ff5f57; }
+        .browser-dot.yellow { background: #ffbd2e; }
+        .browser-dot.green { background: #28ca42; }
+        .browser-url {
+            flex: 1;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #666;
+            margin: 0 10px;
+        }
+        .browser-content {
+            background: white;
+            min-height: 400px;
+        }
+        
+        /* Login Screen Styles */
+        .login-screen {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        .login-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        /* Dashboard Screen Styles */
+        .sidebar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: white;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .chart-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 10px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+        }
+        .table-mockup {
+            font-size: 12px;
+        }
+        .badge-mockup {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .screen-container { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-4 text-primary">🚀 Auto Invest</h1>
+            <p class="lead text-muted">Visualização das Telas do Sistema</p>
+            <p class="text-muted">Documentação visual das interfaces principais</p>
+        </div>
+
+        <!-- TELA 1: LOGIN -->
+        <div class="screen-container">
+            <div class="screen-title">
+                <i class="bi bi-box-arrow-in-right me-2"></i>
+                Tela de Login
+            </div>
+            <div class="screen-description">
+                Interface de autenticação com design moderno, gradiente roxo/azul, validação de formulário e proteção CSRF.
+            </div>
+            
+            <div class="mockup-browser">
+                <div class="browser-bar">
+                    <div class="browser-dot red"></div>
+                    <div class="browser-dot yellow"></div>
+                    <div class="browser-dot green"></div>
+                    <div class="browser-url">https://auto-invest.com/login.php</div>
+                </div>
+                <div class="browser-content">
+                    <div class="login-screen">
+                        <div class="login-card">
+                            <div class="text-center mb-4">
+                                <h2 class="text-primary mb-2">🚀</h2>
+                                <h4 class="card-title">Auto Invest</h4>
+                                <p class="text-muted">Faça login para acessar seu dashboard</p>
+                            </div>
+                            
+                            <form>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Usuário</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-person"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="username" placeholder="Digite seu usuário" value="admin">
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="password" class="form-label">Senha</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-lock"></i>
+                                        </span>
+                                        <input type="password" class="form-control" id="password" placeholder="Digite sua senha" value="••••••••">
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="bi bi-box-arrow-in-right me-2"></i>
+                                        Entrar
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div class="text-center mt-4">
+                                <small class="text-muted">
+                                    <i class="bi bi-shield-check me-1"></i>
+                                    Conexão segura via HTTPS
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TELA 2: DASHBOARD -->
+        <div class="screen-container">
+            <div class="screen-title">
+                <i class="bi bi-speedometer2 me-2"></i>
+                Dashboard Principal
+            </div>
+            <div class="screen-description">
+                Painel de controle completo com estatísticas, gráficos de portfólio, histórico de ordens e rebalanceamentos.
+            </div>
+            
+            <div class="mockup-browser">
+                <div class="browser-bar">
+                    <div class="browser-dot red"></div>
+                    <div class="browser-dot yellow"></div>
+                    <div class="browser-dot green"></div>
+                    <div class="browser-url">https://auto-invest.com/index.php</div>
+                </div>
+                <div class="browser-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- Sidebar -->
+                            <nav class="col-md-3 col-lg-2 sidebar">
+                                <div class="text-center mb-4">
+                                    <h4 class="text-white">🚀 Auto Invest</h4>
+                                    <small class="text-white-50">Dashboard</small>
+                                </div>
+                                
+                                <ul class="nav flex-column">
+                                    <li class="nav-item mb-2">
+                                        <a class="nav-link text-white active" href="#">
+                                            <i class="bi bi-speedometer2 me-2"></i>
+                                            Dashboard
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mb-2">
+                                        <a class="nav-link text-white-50" href="#">
+                                            <i class="bi bi-pie-chart me-2"></i>
+                                            Portfólio
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mb-2">
+                                        <a class="nav-link text-white-50" href="#">
+                                            <i class="bi bi-list-ul me-2"></i>
+                                            Ordens
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mb-2">
+                                        <a class="nav-link text-white-50" href="#">
+                                            <i class="bi bi-gear me-2"></i>
+                                            Configurações
+                                        </a>
+                                    </li>
+                                </ul>
+                                
+                                <hr class="text-white-50">
+                                
+                                <div class="text-center">
+                                    <small class="text-white-50">
+                                        Logado como: <strong>admin</strong>
+                                    </small>
+                                    <br>
+                                    <button class="btn btn-outline-light btn-sm mt-2">
+                                        <i class="bi bi-box-arrow-right me-1"></i>
+                                        Sair
+                                    </button>
+                                </div>
+                            </nav>
+
+                            <!-- Main Content -->
+                            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                                <div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
+                                    <h1 class="h2">Dashboard</h1>
+                                    <button class="btn btn-primary">
+                                        <i class="bi bi-arrow-repeat me-1"></i>
+                                        Rebalancear
+                                    </button>
+                                </div>
+
+                                <!-- Stats Cards -->
+                                <div class="row mb-4">
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="stat-card">
+                                            <div class="text-xs font-weight-bold text-white-50 text-uppercase mb-1">
+                                                Total do Portfólio
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-white">
+                                                $45,230.50
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="stat-card">
+                                            <div class="text-xs font-weight-bold text-white-50 text-uppercase mb-1">
+                                                Ativos
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-white">
+                                                4
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="stat-card">
+                                            <div class="text-xs font-weight-bold text-white-50 text-uppercase mb-1">
+                                                Total de Ordens
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-white">
+                                                127
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="stat-card">
+                                            <div class="text-xs font-weight-bold text-white-50 text-uppercase mb-1">
+                                                Rebalanceamentos
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-white">
+                                                12
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3">
+                                    <!-- Gráfico -->
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5 class="mb-0"><i class="bi bi-pie-chart me-2"></i>Composição da Carteira</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="chart-placeholder">
+                                                    <div class="text-center">
+                                                        <i class="bi bi-pie-chart" style="font-size: 48px; color: #667eea;"></i>
+                                                        <p class="mt-2">Gráfico de Pizza Interativo</p>
+                                                        <small>BTC: 40% | ETH: 30% | BNB: 20% | ADA: 10%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Ativos -->
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5 class="mb-0"><i class="bi bi-coin me-2"></i>Ativos</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-sm table-mockup">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Ativo</th>
+                                                                <th>Qtd.</th>
+                                                                <th>Preço Médio</th>
+                                                                <th>Total (USDT)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><strong>BTCUSDT</strong></td>
+                                                                <td>0.5234</td>
+                                                                <td>$34,500.00</td>
+                                                                <td><strong>$18,056.30</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>ETHUSDT</strong></td>
+                                                                <td>8.2345</td>
+                                                                <td>$2,100.00</td>
+                                                                <td><strong>$17,292.45</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>BNBUSDT</strong></td>
+                                                                <td>45.6789</td>
+                                                                <td>$315.00</td>
+                                                                <td><strong>$14,388.85</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>ADAUSDT</strong></td>
+                                                                <td>12,345.67</td>
+                                                                <td>$0.38</td>
+                                                                <td><strong>$4,691.35</strong></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mt-1">
+                                    <!-- Rebalanceamentos -->
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5 class="mb-0"><i class="bi bi-arrow-repeat me-2"></i>Últimos Rebalanceamentos</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-sm table-mockup">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>ID</th>
+                                                                <th>Capital (USDT)</th>
+                                                                <th>Data</th>
+                                                                <th>Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>#12</td>
+                                                                <td>$1,000.00</td>
+                                                                <td>01/12/2024 00:00</td>
+                                                                <td><span class="badge bg-success badge-mockup">success</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#11</td>
+                                                                <td>$1,000.00</td>
+                                                                <td>01/11/2024 00:00</td>
+                                                                <td><span class="badge bg-success badge-mockup">success</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#10</td>
+                                                                <td>$1,000.00</td>
+                                                                <td>01/10/2024 00:00</td>
+                                                                <td><span class="badge bg-success badge-mockup">success</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Ordens -->
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5 class="mb-0"><i class="bi bi-list-ul me-2"></i>Últimas Ordens</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-sm table-mockup">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>ID</th>
+                                                                <th>Símbolo</th>
+                                                                <th>Lado</th>
+                                                                <th>Qtd.</th>
+                                                                <th>Preço</th>
+                                                                <th>Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>#127</td>
+                                                                <td><strong>BTCUSDT</strong></td>
+                                                                <td><span class="badge bg-success badge-mockup">BUY</span></td>
+                                                                <td>0.0145</td>
+                                                                <td>$34,500.00</td>
+                                                                <td><span class="badge bg-success badge-mockup">FILLED</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#126</td>
+                                                                <td><strong>ETHUSDT</strong></td>
+                                                                <td><span class="badge bg-success badge-mockup">BUY</span></td>
+                                                                <td>0.1428</td>
+                                                                <td>$2,100.00</td>
+                                                                <td><span class="badge bg-success badge-mockup">FILLED</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#125</td>
+                                                                <td><strong>BNBUSDT</strong></td>
+                                                                <td><span class="badge bg-success badge-mockup">BUY</span></td>
+                                                                <td>0.6349</td>
+                                                                <td>$315.00</td>
+                                                                <td><span class="badge bg-success badge-mockup">FILLED</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TELA 3: MODAL REBALANCEAMENTO -->
+        <div class="screen-container">
+            <div class="screen-title">
+                <i class="bi bi-arrow-repeat me-2"></i>
+                Modal de Rebalanceamento
+            </div>
+            <div class="screen-description">
+                Modal para executar rebalanceamento manual com validação de aporte e confirmação.
+            </div>
+            
+            <div class="mockup-browser">
+                <div class="browser-bar">
+                    <div class="browser-dot red"></div>
+                    <div class="browser-dot yellow"></div>
+                    <div class="browser-dot green"></div>
+                    <div class="browser-url">https://auto-invest.com/index.php</div>
+                </div>
+                <div class="browser-content p-4">
+                    <div class="modal fade show d-block" style="position: relative;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Rebalanceamento Manual</h5>
+                                    <button type="button" class="btn-close"></button>
+                                </div>
+                                <form>
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <label for="aporte" class="form-label">Aporte em USDT</label>
+                                            <input type="number" class="form-control" id="aporte" name="aporte" 
+                                                   step="0.01" min="0" placeholder="0.00" value="1000.00">
+                                            <div class="form-text">Deixe em 0 para apenas verificar o portfólio</div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary">Cancelar</button>
+                                        <button type="submit" class="btn btn-primary">Executar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TELA 4: INSTALADOR -->
+        <div class="screen-container">
+            <div class="screen-title">
+                <i class="bi bi-gear me-2"></i>
+                Tela de Instalação
+            </div>
+            <div class="screen-description">
+                Wizard de instalação com configuração de banco de dados, usuário admin e credenciais da API Binance.
+            </div>
+            
+            <div class="mockup-browser">
+                <div class="browser-bar">
+                    <div class="browser-dot red"></div>
+                    <div class="browser-dot yellow"></div>
+                    <div class="browser-dot green"></div>
+                    <div class="browser-url">https://auto-invest.com/install/install.php</div>
+                </div>
+                <div class="browser-content p-4">
+                    <div class="container">
+                        <h3 class="mb-4">Instalador - Auto-Invest</h3>
+                        
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12"><h5>Banco de Dados</h5></div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Host</label>
+                                    <input name="db_host" class="form-control" value="localhost">
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label">Porta</label>
+                                    <input name="db_port" class="form-control" value="5432">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Database</label>
+                                    <input name="db_name" class="form-control" value="auto_invest" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Usuário</label>
+                                    <input name="db_user" class="form-control" value="auto_invest_user" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Senha</label>
+                                    <input name="db_pass" type="password" class="form-control" value="••••••••" required>
+                                </div>
+
+                                <div class="col-12"><h5 class="mt-3">Administrador</h5></div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Usuário</label>
+                                    <input name="admin_user" class="form-control" value="admin">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Senha</label>
+                                    <input name="admin_pass" type="password" class="form-control" value="••••••••" required>
+                                </div>
+
+                                <div class="col-12"><h5 class="mt-3">Binance API</h5></div>
+                                <div class="col-md-6">
+                                    <label class="form-label">API Key</label>
+                                    <input name="api_key" class="form-control" value="••••••••••••••••" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">API Secret</label>
+                                    <input name="api_secret" class="form-control" value="••••••••••••••••" required>
+                                </div>
+
+                                <div class="col-12"><h5 class="mt-3">Criptografia</h5></div>
+                                <div class="col-md-12">
+                                    <label class="form-label">ENCRYPTION_KEY (32+ chars)</label>
+                                    <input name="enc_key" class="form-control" placeholder="chave super secreta (32+ caracteres)" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <button class="btn btn-primary">Instalar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="text-center mt-5 mb-4">
+            <p class="text-muted">
+                <i class="bi bi-info-circle me-1"></i>
+                Estas são representações visuais das telas do sistema Auto Invest
+            </p>
+            <p class="text-muted small">
+                Para visualizar as telas reais, acesse o sistema após a instalação
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
