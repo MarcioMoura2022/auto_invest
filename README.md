@@ -12,9 +12,17 @@ Sistema profissional de investimento automatizado em criptomoedas com interface 
 - **Backup e Recuperação**: Transações de banco com rollback automático
 - **Monitoramento**: Verificação de status das ordens pendentes
 
-## SCREESHOTS
-
+## SCREENSHOTS
+Login
 <img width="1324" height="761" alt="image" src="https://github.com/user-attachments/assets/357e381b-46fe-4c0a-9d3c-6e677ed18470" />
+Dashboard
+<img width="1374" height="843" alt="image" src="https://github.com/user-attachments/assets/73aac4ae-e3a9-4b0c-9055-032dd5b6e47f" />
+Rebalanceamento
+<img width="1363" height="679" alt="image" src="https://github.com/user-attachments/assets/7ce9a6fc-d5b8-4e53-a6bb-0c50123de192" />
+Tela de Instalação
+<img width="1422" height="799" alt="image" src="https://github.com/user-attachments/assets/c345a281-42c4-4e96-95ea-15fe0b80d9a2" />
+
+
 
 
 ## 🔒 Melhorias de Segurança Implementadas
